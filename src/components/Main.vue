@@ -1,6 +1,7 @@
 <template>
-  <v-form v-model="valid">
+  <v-form>
     <v-container>
+      <v-icon x-large>mdi-calculator</v-icon>
       <h4>{{title}}</h4>
       <v-row>
         <v-col cols="12" md="4">
@@ -138,6 +139,11 @@ export default {
       );
     },
   },
+  watch: {
+    installmentCount() {
+      console.log("InstallmentCount");
+    },
+  },
   methods: {
     isNumber: function (evt) {
       evt = evt ? evt : window.event;
@@ -155,3 +161,6 @@ export default {
   },
 };
 </script>
+<style scoped>
+/*  */
+</style>
